@@ -6,16 +6,18 @@ This folder contains a collection of benchmarks for the default Ansor.
 
 ### Prerequisites
 
-please install tvm first
+Build tvm from source and install necessary python packages related to autotuing. 
 
-### matmul
+### Run matmul benchmarks
 
 python batch_matmul_cuda.py
 
-### yolo
+### Run yolo benchmarks (2D convolutions)
 
 python batch_conv2d_cuda_yolo.py
 
-### resnet
+### Run resnet benchmarks (2D convolutions)
 
 python batch_conv2d_cuda_resnet.py
+
+
