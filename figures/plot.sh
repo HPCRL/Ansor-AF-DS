@@ -1,0 +1,5 @@
+python3 plot_all_perf_stack3090.py 
+python3 plot_all_perf_stack4090.py 
+python3 plot_stack_ablation1.py
+python3 plot_stack_ablation2.py
+python3 plot_scatter.py
