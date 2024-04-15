@@ -1,0 +1,3 @@
+Overall Variability Geomean for yolo_aggregated_data.csv: 0.11846473215276658
+Overall Variability Geomean for mm_aggregated_data.csv: 0.06291808025639102
+Overall Variability Geomean for resnet_aggregated_data.csv: 0.10631008881501987
