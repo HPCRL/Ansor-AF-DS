@@ -8,11 +8,14 @@ sizes=[
     #Bert large
 [512,64,1024],      #BMATmul
 [512,4096,1024],    #MLP1
-[512,1024,4096],    #MLP2
 
     #Bert basic
 [512,64,768],       #BMATmul
 [512,3072,768],     #MLP1
+
+    #Bert large
+[512,1024,4096],    #MLP2
+    #Bert basic
 [512,768,3072],     #MLP2
 ]
 
