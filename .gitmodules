@@ -1,3 +1,4 @@
 [submodule "benchmarks/bench_roller"]
 	path = benchmarks/bench_roller
 	url = git@github.com:HPCRL/bench_roller.git
+    branch = main
