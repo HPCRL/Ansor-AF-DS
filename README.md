@@ -1,8 +1,8 @@
-# ICS24_artifact
+# ICS24_Ansor_AF_DS
 
 ## Introduction
 
-This repository contains the artifacts for the paper ICS'24: "Accelerated Auto-Tuning of GPU Kernels for Tensor Computations". The artifacts include the following:
+This repository contains the figures and code Ansor_AF_DS for the paper ICS'24: "Accelerated Auto-Tuning of GPU Kernels for Tensor Computations".
 
 ```
 .
