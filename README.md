@@ -25,17 +25,17 @@ Benchmarks for re-collecting the data, including the following benchmarks:
 - [Ansor-AF] source code of Ansor-AF
 - [Ansor-DS] source code of Ansor-DS
 - [Ansor-AF-DS] source code of Ansor-AF-DS
-- [test](benchmarks/README.md) contains the scripts for re-collecting the data of Ansor, Ansor-AF, Ansor-DS, and Ansor-AF-DS. Please use bash script to run the benchmarks.
+- [test](benchmarks/README.md) contains the scripts for re-collecting the data of Ansor, Ansor-AF, Ansor-DS, and Ansor-AF-DS. Please use the bash script to run the benchmarks.
 
-### 2. Cal_var
+### 2. Calculate the variability
 ```
 .
 ├── cal_var
 ```
-This folder contrains the script and data to calculate the variability of Ansor-AF-DS(in 2 minutes and after 1000-trials) and Ansor(1000-trials)
+This folder contains the script and data to calculate the variability of Ansor-AF-DS(in 2 minutes and after 1000-trials) and Ansor(1000-trials)
 
 
-### 3. Default_ansor_benchmarks
+### 3. Default Ansor benchmarks
 ```
 .
 ├── default_ansor_benchmarks
