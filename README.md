@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This repository contains the figures and code Ansor_AF_DS for the paper ICS'24: "Accelerated Auto-Tuning of GPU Kernels for Tensor Computations".
+This repository contains the figures, tables data and Ansor_AF_DS source in the paper ICS'24: "Accelerated Auto-Tuning of GPU Kernels for Tensor Computations".
 
 ```
 .
@@ -40,7 +40,7 @@ This folder contains the script and data to calculate the variability of Ansor-A
 .
 ├── default_ansor_benchmarks
 ```
-This folder contains the example scripts for Ansor.
+This folder contains the example scripts for the default Ansor.
 
 
 ### 4. Figures
@@ -48,5 +48,5 @@ This folder contains the example scripts for Ansor.
 .
 ├── figures
 ```
-This folder contains the artifacts for reproducing the figures in the paper.
+This folder contains the scripts for reproducing the figures in the paper.
 
