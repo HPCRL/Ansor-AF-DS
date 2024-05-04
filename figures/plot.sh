@@ -3,3 +3,7 @@ python3 plot_all_perf_stack4090.py
 python3 plot_stack_ablation1.py
 python3 plot_stack_ablation2.py
 python3 plot_scatter.py
+python3 plot_var_perf_3090.py 
+python3 plot_var_perf_4090.py 
+python3 cudnn-ansor3090.py 
+python3 cudnn-ansor4090.py 

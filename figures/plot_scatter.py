@@ -113,7 +113,7 @@ our_performance = [res7_flops/time/1e+9 if time != 0 else 0 for time in our_exe_
 plt.figure(figsize=(16, 9))
 plt.scatter(list_of_index, ansor_performance, color='blue', s=21, label='Ansor run 1')
 plt.scatter(our_list_of_index, our_performance, color='red', s=21, label='Ansor run 2')
-plt.xlabel('Time', fontsize=21)
+plt.xlabel('Trials', fontsize=21)
 plt.ylabel('Performance in GFlops', fontsize=25)
 plt.xticks(fontsize=25)
 plt.yticks(fontsize=25)
