@@ -2,3 +2,19 @@
 	path = benchmarks/bench_roller
 	url = git@github.com:HPCRL/bench_roller.git
     branch = main
+[submodule "benchmarks/Ansor_AF_DS"]
+	path = benchmarks/Ansor_AF_DS
+	url = git@github.com:HPCRL/ics24tvm.git
+	branch = ics_1000trials_AF_DS
+[submodule "benchmarks/Ansor_AF"]
+	path = benchmarks/Ansor_AF
+	url = git@github.com:HPCRL/ics24tvm.git
+	branch = ics_1000trials_AF
+[submodule "benchmarks/Ansor_DS"]
+	path = benchmarks/Ansor_DS
+	url = git@github.com:HPCRL/ics24tvm.git
+	branch = ics_1000trials_DS
+[submodule "benchmarks/Ansor"]
+	path = benchmarks/Ansor
+	url = git@github.com:HPCRL/ics24tvm.git
+	branch = local-v09-release
