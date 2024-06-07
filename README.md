@@ -16,7 +16,7 @@ This repository contains the figures, tables data and source code in the paper [
 ### 1. Benchmarks
 ```
 .
-├── benchmarks
+├── [benchmarks](https://github.com/HPCRL/Ansor-AF-DS/tree/main/benchmarks)
 ```
 Benchmarks for re-collecting the data, including the following benchmarks:
 
@@ -26,6 +26,8 @@ Benchmarks for re-collecting the data, including the following benchmarks:
 - [Ansor-DS] source code of Ansor-DS
 - [Ansor-AF-DS] source code of Ansor-AF-DS
 - [test](benchmarks/README.md) contains the scripts for re-collecting the data of Ansor, Ansor-AF, Ansor-DS, and Ansor-AF-DS. Please use the bash script to run the benchmarks.
+
+Please build tvm from source and install necessary python packages.
 
 ### 2. Calculate the variability
 ```
