@@ -16,9 +16,9 @@ This repository contains the figures, tables data and source code in the paper [
 ### 1. Benchmarks
 ```
 .
-├── [benchmarks](https://github.com/HPCRL/Ansor-AF-DS/tree/main/benchmarks)
+├── benchmarks
 ```
-Benchmarks for re-collecting the data, including the following benchmarks:
+[Benchmarks](https://github.com/HPCRL/Ansor-AF-DS/tree/main/benchmarks) for re-collecting the data, including the following benchmarks:
 
 - [bench_roller](https://github.com/HPCRL/bench_roller/tree/main) for evaluating the top50 performance of the rolle, tvm and Cuda toolkit(> 12.0) are required.
 - [Ansor] source code of Ansor v0.9
