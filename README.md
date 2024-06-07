@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This repository contains the figures, tables data and source code in the paper ICS'24: "Accelerated Auto-Tuning of GPU Kernels for Tensor Computations".
+This repository contains the figures, tables data and source code in the paper [ICS'24: Accelerated Auto-Tuning of GPU Kernels for Tensor Computations](https://dl.acm.org/doi/10.1145/3650200.3656626).
 
 ```
 .
