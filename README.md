@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This repository contains the figures, tables data and Ansor_AF_DS source in the paper ICS'24: "Accelerated Auto-Tuning of GPU Kernels for Tensor Computations".
+This repository contains the figures, tables data and source code in the paper ICS'24: "Accelerated Auto-Tuning of GPU Kernels for Tensor Computations".
 
 ```
 .
@@ -20,7 +20,7 @@ This repository contains the figures, tables data and Ansor_AF_DS source in the 
 ```
 Benchmarks for re-collecting the data, including the following benchmarks:
 
-- [bench_roller](benchmarks/bench_roller/README.md) for evaluating the top50 performance of the rolle, tvm and Cuda toolkit(> 12.0) are required.
+- [bench_roller](https://github.com/HPCRL/bench_roller/tree/main) for evaluating the top50 performance of the rolle, tvm and Cuda toolkit(> 12.0) are required.
 - [Ansor] source code of Ansor v0.9
 - [Ansor-AF] source code of Ansor-AF
 - [Ansor-DS] source code of Ansor-DS
