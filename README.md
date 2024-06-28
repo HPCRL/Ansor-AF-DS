@@ -29,6 +29,13 @@ This repository contains the figures, tables data and source code in the paper [
 
 Please build tvm from source and install necessary python packages.
 
+create conda environment:
+```
+conda create -n ansor python=3.10
+conda activate ansor
+conda install -c conda-forge xgboost=1.5.0 numpy decorator attrs tornado psutil cloudpickle pandas scipy pytest
+```
+
 ### 2. Calculate the variability
 ```
 .
