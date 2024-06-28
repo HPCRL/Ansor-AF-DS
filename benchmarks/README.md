@@ -37,6 +37,7 @@ export TVM_HOME=$PWD; export PYTHONPATH=$TVM_HOME/python; cd ./build || exit 1; 
 
 back to the benchmarks folder and run
 ```
+cd PATH_TO_BASH_SCRIPTS
 bash run_tests_times_conv.sh conv2d cuda 3 128 48 yolo 5 64 0.6
 bash run_tests_times_conv.sh conv2d cuda 3 128 48 resnet 5 64 0.6
 bash run_tests_times_mm.sh matmul cuda 3 128 48 5 64 0.6
@@ -53,6 +54,7 @@ export TVM_HOME=$PWD; export PYTHONPATH=$TVM_HOME/python; cd ./build || exit 1; 
 
 back to the benchmarks folder and run
 ```
+cd PATH_TO_BASH_SCRIPTS
 bash run_tests_times_mm.sh matmul cuda 3 128 48 1000 64
 bash run_tests_times_conv.sh conv2d cuda 3 128 48 yolo 1000 64 0.6
 bash run_tests_times_conv.sh conv2d cuda 3 128 48 resnet 1000 64 0.6
