@@ -3,8 +3,8 @@
 benchmark and log the end-to-end time
 
 
-## Usage
 
+## Build TVM
 
 Please build tvm from source and install necessary python packages.
 
@@ -14,6 +14,8 @@ conda create -n ansor python=3.10
 conda activate ansor
 conda install -c conda-forge xgboost=1.5.0 numpy decorator attrs tornado psutil cloudpickle pandas scipy pytest
 ```
+
+## Usage
 
 bash run_tests_times_conv.sh conv2d cuda num_of_runs num_sm num_shared_mem network num_trials num_init_states threshold pz_num
 
