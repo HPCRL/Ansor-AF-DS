@@ -4,15 +4,6 @@
 
 This repository contains the figures, tables data and source code in the paper [ICS'24: Accelerated Auto-Tuning of GPU Kernels for Tensor Computations](https://dl.acm.org/doi/10.1145/3650200.3656626).
 
-```
-.
-├── benchmarks
-├── cal_var
-├── default_ansor_benchmarks
-├── figures
-```
-
-
 ### 1. Benchmarks
 ```
 .
@@ -39,7 +30,7 @@ conda activate ansor
 conda install -c conda-forge xgboost=1.5.0 numpy decorator attrs tornado psutil cloudpickle pandas scipy pytest
 ```
 
-The conda environment setting was from the [official documentation from TVM](https://tvm.apache.org/docs/v0.9.0/install/from_source.html#developers-get-source-from-github)
+The conda environment setting was from the [official documentation of TVM](https://tvm.apache.org/docs/v0.9.0/install/from_source.html#developers-get-source-from-github)
 
 
 #### Benchmark script setting and explanation
@@ -111,6 +102,7 @@ This folder contains the script and data to calculate the variability of Ansor-A
 python3 calc_var.py
 
 ```
+
 
 ### 3. Reproduce the figures
 ```
