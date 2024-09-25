@@ -28,7 +28,7 @@ This repository contains the figures, tables data and source code in the paper [
 - [test](benchmarks/README.md) contains the scripts for re-collecting the data of Ansor, Ansor-AF, Ansor-DS, and Ansor-AF-DS. Please use the bash script to run the benchmarks.
 
 
-#### Build TVM
+#### Create Conda environment
 
 To build TVM from source and install the necessary Python packages, follow these steps:
 
@@ -39,7 +39,10 @@ conda activate ansor
 conda install -c conda-forge xgboost=1.5.0 numpy decorator attrs tornado psutil cloudpickle pandas scipy pytest
 ```
 
-#### Usage
+The conda environment setting was from the [official documentation from TVM](https://tvm.apache.org/docs/v0.9.0/install/from_source.html#developers-get-source-from-github)
+
+
+#### Benchmark script setting and explanation
 
 Use the following command to run tests:
 
@@ -62,16 +65,17 @@ This command runs the YOLO network on CUDA with the following parameters:
 
 #####  Benchmark the Ansor-AF-DS
 
-Build:
+Build Ansor-AF-DS first:
 ```
-cd PATH_TO_ANSOR_AF_DS
+git clone git@github.com:HPCRL/Ansor-AF-DS.git --recursive
+cd Ansor-AF-DS/benchmarks/Ansor-AF-DS
 mkdir build
 export TVM_HOME=$PWD; export PYTHONPATH=$TVM_HOME/python; cd ./build || exit 1; rm * -rf && cp ~/config.cmake ./ && cmake .. && make -j8
 ```
 
-Back to the benchmarks folder and test:
+Then go to the benchmarks folder and test: (The following setting is used for NVIDIA RTX 4090; please refer to the previous explanation and change it for your GPUs)
 ```
-cd PATH_TO_BASH_SCRIPTS
+cd Ansor-AF-DS/benchmarks
 bash run_tests_times_conv.sh conv2d cuda 3 128 48 yolo 5 64 0.6
 bash run_tests_times_conv.sh conv2d cuda 3 128 48 resnet 5 64 0.6
 bash run_tests_times_mm.sh matmul cuda 3 128 48 5 64 0.6
@@ -79,23 +83,23 @@ bash run_tests_times_mm.sh matmul cuda 3 128 48 5 64 0.6
 
 ##### Benchmark Ansor
 
-Build:
+Build TVM first:
 ```
-cd PATH_TO_ANSOR
+cd Ansor-AF-DS/benchmarks/Ansor
 mkdir build
 export TVM_HOME=$PWD; export PYTHONPATH=$TVM_HOME/python; cd ./build || exit 1; rm * -rf && cp ~/config.cmake ./ && cmake .. && make -j8
 ```
 
-Back to the benchmarks folder and test:
+Then go to the benchmarks folder and test: (The following setting is used for NVIDIA RTX 4090; please refer to the previous explanation and change it for your GPUs)
 ```
-cd PATH_TO_BASH_SCRIPTS
+cd Ansor-AF-DS/benchmarks
 bash run_tests_times_mm.sh matmul cuda 3 128 48 1000 64
 bash run_tests_times_conv.sh conv2d cuda 3 128 48 yolo 1000 64 0.6
 bash run_tests_times_conv.sh conv2d cuda 3 128 48 resnet 1000 64 0.6
 ```
 
 
-### 2. Calculate the variability
+### 2. Reproduce the variability data
 ```
 .
 ├── cal_var
@@ -108,16 +112,7 @@ python3 calc_var.py
 
 ```
 
-
-### 3. Default Ansor benchmarks
-```
-.
-├── default_ansor_benchmarks
-```
-This folder contains the example scripts for the default Ansor.
-
-
-### 4. Figures
+### 3. Reproduce the figures
 ```
 .
 ├── figures
