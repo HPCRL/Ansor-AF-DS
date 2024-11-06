@@ -56,17 +56,33 @@ This command runs the YOLO network on CUDA with the following parameters:
 
 #####  Benchmark the Ansor-AF-DS
 
+Before proceeding, please make sure that both **CUDA** and **LLVM** are installed on your system. You can verify this by running the following commands in your terminal:
+
+```
+llvm-config --version
+nvcc --version
+```
+
 Build Ansor-AF-DS first:
 ```
 git clone git@github.com:HPCRL/Ansor-AF-DS.git --recursive
-cd Ansor-AF-DS/benchmarks/Ansor-AF-DS
-mkdir build
-export TVM_HOME=$PWD; export PYTHONPATH=$TVM_HOME/python; cd ./build || exit 1; rm * -rf && cp ~/config.cmake ./ && cmake .. && make -j8
+cd Ansor-AF-DS/benchmarks/Ansor_AF_DS
+
+export TVM_HOME=$PWD && export PYTHONPATH=$TVM_HOME/python
+mkdir -p build && cd ./build
+
+cp "$TVM_HOME/cmake/config.cmake" ./
+
+sed -i 's/set(USE_CUDA OFF)/set(USE_CUDA ON)/' config.cmake
+sed -i 's/set(USE_LLVM OFF)/set(USE_LLVM ON)/' config.cmake
+
+cmake ..
+make -j8
 ```
 
 Then go to the benchmarks folder and test: (The following setting is used for NVIDIA RTX 4090; please refer to the previous explanation and change it for your GPUs)
 ```
-cd Ansor-AF-DS/benchmarks
+cd ../../
 bash run_tests_times_conv.sh conv2d cuda 3 128 48 yolo 5 64 0.6
 bash run_tests_times_conv.sh conv2d cuda 3 128 48 resnet 5 64 0.6
 bash run_tests_times_mm.sh matmul cuda 3 128 48 5 64 0.6
@@ -77,13 +93,22 @@ bash run_tests_times_mm.sh matmul cuda 3 128 48 5 64 0.6
 Build TVM first:
 ```
 cd Ansor-AF-DS/benchmarks/Ansor
-mkdir build
-export TVM_HOME=$PWD; export PYTHONPATH=$TVM_HOME/python; cd ./build || exit 1; rm * -rf && cp ~/config.cmake ./ && cmake .. && make -j8
+
+export TVM_HOME=$PWD && export PYTHONPATH=$TVM_HOME/python
+mkdir -p build && cd ./build
+
+cp "$TVM_HOME/cmake/config.cmake" ./
+
+sed -i 's/set(USE_CUDA OFF)/set(USE_CUDA ON)/' config.cmake
+sed -i 's/set(USE_LLVM OFF)/set(USE_LLVM ON)/' config.cmake
+
+cmake ..
+make -j8
 ```
 
 Then go to the benchmarks folder and test: (The following setting is used for NVIDIA RTX 4090; please refer to the previous explanation and change it for your GPUs)
 ```
-cd Ansor-AF-DS/benchmarks
+cd ../../
 bash run_tests_times_mm.sh matmul cuda 3 128 48 1000 64
 bash run_tests_times_conv.sh conv2d cuda 3 128 48 yolo 1000 64 0.6
 bash run_tests_times_conv.sh conv2d cuda 3 128 48 resnet 1000 64 0.6
@@ -100,9 +125,7 @@ This folder contains the script and data to calculate the variability of Ansor-A
 #### Calculate the variability
 ```
 python3 calc_var.py
-
 ```
-
 
 ### 3. Reproduce the figures
 ```
