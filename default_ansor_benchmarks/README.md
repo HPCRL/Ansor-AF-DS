@@ -1,12 +1,12 @@
 ## Description
 
-This folder contains a collection of benchmarks for the default Ansor.
+This folder contains a collection of benchmarks for the default Ansor. You could use it to generate the Ansor baseline.
 
 ## Getting Started
 
 ### Prerequisites
 
-Build tvm from source and install necessary python packages related to autotuing. 
+Please build TVM from the source and install the necessary Python packages. 
 
 ### Run matmul benchmarks
 ```
