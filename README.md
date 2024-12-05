@@ -1,8 +1,8 @@
-# ICS24_Ansor_AF_DS
+# Ansor-AF-DS
 
 ## Introduction
 
-This repository contains the figures, tables data and source code in the paper [ICS'24: Accelerated Auto-Tuning of GPU Kernels for Tensor Computations](https://dl.acm.org/doi/10.1145/3650200.3656626).
+This repository contains the figures, tables, data, and source code in the paper [ICS'24: Accelerated Auto-Tuning of GPU Kernels for Tensor Computations](https://dl.acm.org/doi/10.1145/3650200.3656626).
 
 ### 1. Benchmarks
 ```
