@@ -174,3 +174,34 @@ python3 plot_var_perf_3090.py
 python3 plot_var_perf_4090.py
 ```
 
+## Citation
+If you found it useful, please consider citing our paper:
+```
+@inproceedings{10.1145/3650200.3656626,
+author = {Li, Chendi and Xu, Yufan and Saravani, Sina Mahdipour and Sadayappan, Ponnuswamy},
+title = {Accelerated Auto-Tuning of GPU Kernels for Tensor Computations},
+year = {2024},
+isbn = {9798400706103},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3650200.3656626},
+doi = {10.1145/3650200.3656626},
+abstract = {TVM is a state-of-the-art auto-tuning compiler for the synthesis of high-performance implementations of tensor computations. However, an extensive search in the vast design space via thousands of compile-execute trials is often needed to identify high-performance code versions, leading to high auto-tuning time. This paper develops new performance modeling and design space exploration strategies to accelerate the code optimization process within TVM. Experimental evaluation on a number of matrix-matrix multiplication and 2D convolution kernels demonstrates about an order-of-magnitude improvement in auto-tuning time to achieve the same level of code performance.},
+booktitle = {Proceedings of the 38th ACM International Conference on Supercomputing},
+pages = {549–561},
+numpages = {13},
+keywords = {Auto-tuning, Design space exploration, GPU kernel optimization, Neural networks, Performance modeling, Tile-size optimization},
+location = {Kyoto, Japan},
+series = {ICS '24}
+}
+```
+
+## License
+
+
+This project is licensed under the Apache License, Version 2.0 (the "License").  
+You may not use this file except in compliance with the License.  
+
+You may obtain a copy of the License at:
+
+[Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)
